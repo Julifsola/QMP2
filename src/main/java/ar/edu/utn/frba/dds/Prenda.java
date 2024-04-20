@@ -10,56 +10,31 @@ public class Prenda {
   private ColorPrenda colorSecundario;
   private Trama trama;
 
-  // Constructor obligatorio
-  public Prenda(Categoria categoria, TipoPrenda tipo, Material material, ColorPrenda colorPrimario, ColorPrenda colorSecundario) {
+  /**/
+  public Prenda(Categoria categoria, TipoPrenda tipo, Material material, ColorPrenda colorPrimario, ColorPrenda colorSecundario, Trama trama) {
     if (tipo == null) {
-      throw new IllegalArgumentException("El tipo no debe estar vacio");
+      throw new ExcepcionPrendaInvalida("El tipo no debe estar vacio");
     }
     this.tipo = tipo;
 
     this.categoria = tipo.EsCategoria();
 
     if (material == null) {
-      throw new IllegalArgumentException("El material no debe estar vacio");
+      throw new ExcepcionPrendaInvalida("El material no debe estar vacio");
     }
     this.material = material;
 
     if (colorPrimario == null) {
-      throw new IllegalArgumentException("El color primario no debe estar vacio");
+      throw new ExcepcionPrendaInvalida("El color primario no debe estar vacio");
     }
     this.colorPrimario = colorPrimario;
 
     if (trama == null) {
-      throw new IllegalArgumentException("La trama no debe estar vacia");
+      throw new ExcepcionPrendaInvalida("La trama no debe estar vacia");
     }
 
-    this.colorSecundario = colorSecundario;
+    this.colorSecundario = colorSecundario; // Puede ser NULL
   }
-  // Constructor opcional
-  public Prenda(Categoria categoria, TipoPrenda tipo, Material material, ColorPrenda colorPrimario) {
-    if (tipo == null) {
-      throw new IllegalArgumentException("El tipo no debe estar vacio");
-    }
-    this.tipo = tipo;
-
-    this.categoria = tipo.EsCategoria();
-
-    if (material == null) {
-      throw new IllegalArgumentException("El material no debe estar vacio");
-    }
-    this.material = material;
-
-    if (colorPrimario == null) {
-      throw new IllegalArgumentException("El color primario no debe estar vacio");
-    }
-    this.colorPrimario = colorPrimario;
-
-    if (trama == null) {
-      throw new IllegalArgumentException("La trama no debe estar vacia");
-    }
-  }
-
-
 
 }
 

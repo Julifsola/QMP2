@@ -1,5 +1,11 @@
 package ar.edu.utn.frba.dds;
 
 public enum Material {
-  JEAN,ALGODON,SEDA,LINO,LYCRA,POLIESTER,LANA,NYLON
+  EAN,ALGODON,SEDA,LINO,LYCRA,POLIESTER,LANA,NYLON
 }
+
+
+//Convertir a clase
+
+// Prenda -> Material
+//
